@@ -1,13 +1,13 @@
 {
   // Cloudflare Workers (static assets) config for the portfolio.
-  // `npx wrangler deploy` uploads everything in ./out as static assets —
-  // no Worker script needed for a fully static Next.js export.
+  // With this file present, `npx wrangler deploy` uploads ./out as static
+  // assets and SKIPS the Next.js OpenNext auto-conversion (which fails on
+  // Next 14). The "name" must match your existing Worker project.
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "harishkumar-portfolio",
+  "name": "portfolioharish1333",
   "compatibility_date": "2026-06-27",
   "assets": {
     "directory": "./out",
-    // Serve the styled 404 page for unknown paths.
     "not_found_handling": "404-page"
   }
 }
